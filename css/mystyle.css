@@ -1,0 +1,79 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Мобильное меню */
+/* Стили меню */
+.topnav {
+  overflow: hidden;
+  background-color: #646464;
+}
+.topnav a {
+  display: none;
+  float: left;
+  text-decoration: none;
+  color: #f0f0f0;
+  text-align: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 16px 20px;
+}
+.topnav a:hover {
+  background-color: #f0f0f0;
+  color: #646464;
+}
+.topnav a.active {
+  background-color: #0a0ac8;
+  color: white;
+}
+.topnav .icon_mobile {
+  display: inline-block;
+  cursor: pointer;
+}
+.topnav .icon_mobile .line1 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+.topnav .icon_mobile .line2 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+.topnav .icon_mobile .line3 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+.topnav .change .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+.topnav .change .line2 {
+  opacity: 0;
+}
+.topnav .change .line3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.mob a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+@media only screen and (min-width: 600px) {
+  .topnav a {
+    display: block;
+  }
+
+  .topnav .icon_mobile {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=mystyle.css.map */

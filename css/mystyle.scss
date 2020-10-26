@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Мобильное меню */
+@mixin line {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+/* Стили меню */
+.topnav {
+    overflow: hidden;
+    background-color: rgb(100, 100, 100);
+    a {
+        display: none;
+        float: left;
+        text-decoration: none;
+        color: rgb(240, 240, 240);
+        text-align: center;
+        font-size: 1.2em;
+        cursor: pointer;
+        padding: 16px 20px;
+
+        &:hover {
+            background-color: rgb(240, 240, 240);
+            color: rgb(100, 100, 100);
+        }
+        &.active {
+            background-color: rgb(10, 10, 200);
+            color: white;
+        }
+    }
+    .icon_mobile {
+        display: inline-block;
+        cursor: pointer;
+        .line1 {
+            @include line;
+        }
+        .line2 {
+            @include line;
+        }
+        .line3 {
+            @include line;
+        }
+    }
+    
+    .change {
+        .line1 {transform: rotate(-45deg) translate(-8px, 8px);}
+        .line2 {opacity: 0;}
+        .line3 {transform: rotate(45deg) translate(-8px, -8px);}
+    }
+}
+.mob a{
+    float: none;
+    display: block;
+    text-align: left;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .topnav a {display: block;}
+    .topnav .icon_mobile {display: none;}
+} 
+
